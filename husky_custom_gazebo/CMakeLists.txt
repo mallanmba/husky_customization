@@ -4,7 +4,13 @@ project(husky_custom_gazebo)
 find_package(catkin)
 
 catkin_package()
-catkin_add_env_hooks(60.husky_custom_gazebo
+catkin_add_env_hooks(
+  60.husky_custom_gazebo
+  SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
+
+# mallan: add rpgnd hooks
+catkin_add_env_hooks(
+  61.rpgnd_sim_conops
   SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
 
 install(
