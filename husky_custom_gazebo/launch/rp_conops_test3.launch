@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="domainId" default="13" />
+
+  <!-- override husky_gazebo husky_empty_world.launch variables -->
+  <include file="$(find husky_custom_gazebo)/launch/rp_conops_empty_world.launch">
+    <arg name="world_name"     value="$(find husky_custom_gazebo)/worlds/rp_conops_test1.world"/>
+    <arg name="laser_enabled"  value="false"/>
+    <arg name="ur5_enabled"    value="false"/>
+    <arg name="kinect_enabled" value="false"/>
+  </include>
+
+  <include file="$(find husky_custom_gazebo)/launch/rp_move_base.launch" />
+
+  <include file="$(find husky_viz)/launch/view_robot.launch" />
+
+  <node  pkg="rqt_gui" 
+        type="rqt_gui" 
+        name="rqt_gui" />
+
+  <node  pkg="rapid_ros_bridge_rp" 
+        type="rapid_ros_bridge_rp" 
+        name="rapid_ros_bridge_rp" 
+         cwd="node"
+        args="-MRN RpHusky -MCF RapidRosBridgeRP.xml -MDI $(arg domainId)"/>
+
+</launch>
+
+
