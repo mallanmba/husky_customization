@@ -1,0 +1,19 @@
+- git: {local-name: husky,               uri: 'https://github.com/husky/husky.git',                    version: 'indigo-devel' }
+- git: {local-name: husky_desktop,       uri: 'https://github.com/husky/husky_desktop.git',            version: 'indigo-devel' }
+- git: {local-name: husky_robot,         uri: 'https://github.com/husky/husky_robot.git',              version: 'indigo-devel' }
+- git: {local-name: husky_simulator,     uri: 'https://github.com/husky/husky_simulator.git',          version: 'indigo-devel' }
+#- git: {local-name: hector_gazebo,       uri: 'https://github.com/tu-darmstadt-ros-pkg/hector_gazebo', version: 'indigo-devel' }
+- git: {local-name: hector_gazebo,       uri: 'https://github.com/nkoenig/hector_gazebo.git',          version: 'indigo-gazebo7-devel' }
+
+- git: {local-name: gazebo_ros_pkgs,     uri: 'https://github.com/ros-simulation/gazebo_ros_pkgs.git', version: 'indigo-devel' }
+
+- git: {local-name: husky_customization, uri: 'https://github.com/mallanmba/husky_customization.git',  version: 'rpgnd_sim/indigo' }
+
+#- git: {local-name: rapid_ros_bridge,    uri: 'https://babelfish.arc.nasa.gov/git/rapid_ros_bridge',    version: 'master' }
+#- git: {local-name: rapid_ros_bridge_rp, uri: 'https://babelfish.arc.nasa.gov/git/rapid_ros_bridge_rp', version: 'master' }
+
+
+
+
+
+
