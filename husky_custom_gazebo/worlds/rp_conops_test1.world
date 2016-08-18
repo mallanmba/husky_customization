@@ -140,8 +140,8 @@
           </geometry>
         <material>
           <script>
-            <uri>model://my_lightmap_table/materials/scripts</uri>
-            <uri>model://my_lightmap_table/materials/textures</uri>
+            <uri>model://moon/materials/scripts</uri>
+            <uri>model://moon/materials/textures</uri>
             <name>Table/Marble_Lightmap</name>
           </script>
         </material>

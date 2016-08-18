@@ -30,7 +30,8 @@
   <xacro:property name="mast_h2" value="0.8" /> 
   
   <xacro:property name="Camera01Name"       value="NavCamLeft" /> 
-  <xacro:property name="Camera01UpdateRate" value="0.5" /> 
+  <!-- xacro:property name="Camera01UpdateRate" value="0.5" / --> 
+  <xacro:property name="Camera01UpdateRate" value="10" /> 
   
   <xacro:macro name="test_mast">
   
@@ -93,7 +94,7 @@
     <child link="pan_link"/>
     <origin xyz="0 0 ${mast_ht}" rpy="0 0 0" />
     <axis xyz="0 0 1"/>
-    <limit lower="${-2.0 * pi}" upper="${2.0 * pi}" effort="150.0" velocity="3.15"/>
+    <limit lower="${-1.0 * pi}" upper="${1.0 * pi}" effort="150.0" velocity="3.15"/>
   </joint>
   <transmission name="pan_transmission">
     <type>transmission_interface/SimpleTransmission</type>
@@ -135,7 +136,7 @@
     <child link="tilt_link"/>
     <origin xyz="0 0 0.2" rpy="0 0.2 0" />
     <axis xyz="0 1 0"/>
-    <limit lower="${-2.0 * pi}" upper="${2.0 * pi}" effort="150.0" velocity="3.15"/>
+    <limit lower="${-1.0 * pi}" upper="${1.0 * pi}" effort="150.0" velocity="3.15"/>
   </joint>
   <transmission name="tilt_transmission">
     <type>transmission_interface/SimpleTransmission</type>
