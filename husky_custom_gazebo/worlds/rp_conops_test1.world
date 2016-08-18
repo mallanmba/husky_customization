@@ -75,6 +75,36 @@
       </link>
     </model>
     
+  <!-- model name="my_lightmap_table">
+    <static>true</static>
+    <pose>0 0 0.648 0 0 0</pose>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model:///my_lightmap_table/meshes/table_lightmap.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://my_lightmap_table/meshes/table_lightmap.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://my_lightmap_table/materials/scripts</uri>
+            <uri>model://my_lightmap_table/materials/textures</uri>
+            <name>Table/Marble_Lightmap</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model -->
+  
     <model name='DemMesh'>
       <pose>0 0 -0.3  0 0 0</pose>
       <static>1</static>
@@ -108,7 +138,13 @@
               <uri>model://moon/meshes/moon.dae</uri>
             </mesh>
           </geometry>
-          <material/>
+        <material>
+          <script>
+            <uri>model://my_lightmap_table/materials/scripts</uri>
+            <uri>model://my_lightmap_table/materials/textures</uri>
+            <name>Table/Marble_Lightmap</name>
+          </script>
+        </material>
         </visual>
         <velocity_decay>
           <linear>0</linear>
@@ -120,6 +156,8 @@
       </link>
     </model>
 
+
+    
     <scene>
       <ambient>0.0 0.0 0.0 1</ambient>
       <background>0.0 0.0 0.0 1</background>

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="my_lightmap_table">
+    <static>true</static>
+    <pose>0 0 0.648 0 0 0</pose>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model:///my_lightmap_table/meshes/table_lightmap.dae</uri>
+            <scale>0.25 0.25 0.25</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://my_lightmap_table/meshes/table_lightmap.dae</uri>
+            <scale>0.25 0.25 0.25</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://my_lightmap_table/materials/scripts</uri>
+            <uri>model://my_lightmap_table/materials/textures</uri>
+            <name>Table/Marble_Lightmap</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
