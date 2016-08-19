@@ -57,7 +57,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <origin xyz="0.1 -0.1 0" rpy="0 0 0.5" />
   </joint -->
 
+  <!--
   <xacro:include filename="$(find husky_custom_description)/urdf/test_mast.urdf.xacro" />
   <xacro:test_mast />
+  -->
+
+  <xacro:include filename="$(find husky_custom_description)/urdf/stereo_test_mast.urdf.xacro" />
+  <xacro:stereo_test_mast />
   
 </robot>
