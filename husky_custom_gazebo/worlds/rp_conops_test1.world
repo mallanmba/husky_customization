@@ -142,7 +142,7 @@
           <script>
             <uri>model://moon/materials/scripts</uri>
             <uri>model://moon/materials/textures</uri>
-            <name>Table/Marble_Lightmap</name>
+            <name>test/dark_grey_material</name>
           </script>
         </material>
         </visual>
