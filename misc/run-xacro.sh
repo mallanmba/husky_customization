@@ -1,5 +1,5 @@
 /opt/ros/indigo/share/xacro/xacro.py -o husky_custom.urdf \
-  /home/mallan/ros/rpgnd_sim_ws/src/husky_customization/husky_custom_description/urdf/custom_description.urdf.xacro \
+  ${HUSKY_GAZEBO_DESCRIPTION} \
   laser_enabled:=false  \
   ur5_enabled:=false    \
   kinect_enabled:=false 
