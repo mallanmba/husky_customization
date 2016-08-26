@@ -30,7 +30,7 @@
   <xacro:property name="mast_h2" value="0.8" /> 
   
   <xacro:property name="Camera01Name"       value="NavCamStereo" /> 
-  <xacro:property name="Camera01UpdateRate" value="30" />
+  <xacro:property name="Camera01UpdateRate" value="1" />
   <xacro:property name="camera_baseline"      value="0.50" />
   
   <xacro:macro name="stereo_test_mast">

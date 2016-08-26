@@ -1,0 +1,33 @@
+vertex_program test_glsl_vert glsl
+{
+    source test_glsl.vert
+}
+
+fragment_program test_glsl_frag glsl
+{
+    source test_glsl.frag
+}
+
+material test_glsl
+{
+    technique
+    {
+      pass
+      {
+          vertex_program_ref test_glsl_vert
+          {
+            param_named_auto worldViewProj worldviewproj_matrix
+          }
+          
+          fragment_program_ref test_glsl_frag
+          {
+            param_named diffuseMap int 0
+          }
+          
+          texture_unit
+          {
+            texture test_image.png 2d
+          }
+      }
+    }
+}

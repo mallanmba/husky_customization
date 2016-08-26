@@ -9,6 +9,8 @@
 
 - git: {local-name: husky_customization, uri: 'https://github.com/mallanmba/husky_customization.git',  version: 'rpgnd_sim/indigo' }
 
+#- git: {local-name: rp-waypoint-driving, uri: 'wow.arc.nasa.gov:/home/pfurlong/repos/rp-waypoint-driving.git', version: 'master' }
+
 #- git: {local-name: rapid_ros_bridge,    uri: 'https://babelfish.arc.nasa.gov/git/rapid_ros_bridge',    version: 'master' }
 #- git: {local-name: rapid_ros_bridge_rp, uri: 'https://babelfish.arc.nasa.gov/git/rapid_ros_bridge_rp', version: 'master' }
 
