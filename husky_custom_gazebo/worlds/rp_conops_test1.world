@@ -122,8 +122,6 @@
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <!-- mu>1.00</mu>
-                <mu2>.50</mu2 -->
               </ode>
             </friction>
             <contact>
@@ -142,7 +140,10 @@
           <script>
             <uri>model://moon/materials/scripts</uri>
             <uri>model://moon/materials/textures</uri>
+            <uri>model://moon/materials/programs</uri>
+            <!-- name>test/red_material</name -->
             <name>test/dark_grey_material</name>
+            <!-- name>test/test_glsl</name -->
           </script>
         </material>
         </visual>
