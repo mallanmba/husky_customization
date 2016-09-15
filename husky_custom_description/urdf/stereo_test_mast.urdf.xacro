@@ -174,13 +174,13 @@
         <box size="0.1 0.1 0.1"/>
       </geometry>
     </collision>
-    <visual>
-      <origin xyz="0 0 0"  rpy="0 0 0"/>
-      <geometry>
-        <box size="0.025 ${camera_baseline} 0.025"/>
-      </geometry>
-      <material name="Red"/>
-    </visual>
+      <visual>
+        <origin xyz="0 0 0"  rpy="0 0 0"/>
+        <geometry>
+          <box size="0.025 ${camera_baseline} 0.025"/>
+        </geometry>
+        <material name="Red"/>
+      </visual>
     <visual>
       <origin xyz="0 ${camera_baseline/2} 0"  rpy="0 0 0"/>
       <geometry>
@@ -215,24 +215,23 @@
     <material>Gazebo/Red</material>
     <sensor type="multicamera" name="${Camera01Name}">
       <update_rate>${Camera01UpdateRate}</update_rate>
-      
       <camera name="left">
-        <pose>0 ${camera_baseline/2} 0 0 0 0</pose>
-        <horizontal_fov>1.3962634</horizontal_fov>
-        <image>
-          <width>800</width>
-          <height>800</height>
-          <format>R8G8B8</format>
-        </image>
-        <clip>
-          <near>0.02</near>
-          <far>300</far>
-        </clip>
-        <noise>
-          <type>gaussian</type>
-          <mean>0.0</mean>
-          <stddev>0.007</stddev>
-        </noise>
+          <pose>0 ${camera_baseline/2} 0 0 0 0</pose>
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image>
+            <width>800</width>
+            <height>800</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.02</near>
+            <far>300</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
       </camera>
 
       <camera name="right">
@@ -279,6 +278,23 @@
     <child link="${Camera01Name}_link"/>
   </joint>
 
-  
+  <gazebo reference="${Camera01Name}Left_link"/>
+  <link name="${Camera01Name}Left_link"/>
+  <joint name="leftCamera_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.0 ${camera_baseline/2} 0.0" rpy="0 0 0"/>
+    <parent link="${Camera01Name}_link"/>
+    <child link="${Camera01Name}Left_link"/>
+  </joint>
+
+  <gazebo reference="${Camera01Name}Right_link"/>
+  <link name="${Camera01Name}Right_link"/>
+  <joint name="rightCamera_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.0 -${camera_baseline/2} 0.0" rpy="0 0 0"/>
+    <parent link="${Camera01Name}_link"/>
+    <child link="${Camera01Name}Right_link"/>
+  </joint>
+
   </xacro:macro>
 </robot>
