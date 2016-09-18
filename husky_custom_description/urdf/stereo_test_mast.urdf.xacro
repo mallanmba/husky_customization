@@ -282,7 +282,7 @@
   <link name="${Camera01Name}Left_link"/>
   <joint name="leftCamera_joint" type="fixed">
     <axis xyz="0 1 0" />
-    <origin xyz="0.0 ${camera_baseline/2} 0.0" rpy="0 0 0"/>
+    <origin xyz="0.0 ${camera_baseline/2} 0.0" rpy="-${pi/2.0} 0 -${pi/2.0}"/>
     <parent link="${Camera01Name}_link"/>
     <child link="${Camera01Name}Left_link"/>
   </joint>
@@ -291,7 +291,7 @@
   <link name="${Camera01Name}Right_link"/>
   <joint name="rightCamera_joint" type="fixed">
     <axis xyz="0 1 0" />
-    <origin xyz="0.0 -${camera_baseline/2} 0.0" rpy="0 0 0"/>
+    <origin xyz="0.0 -${camera_baseline/2} 0.0" rpy="-${pi/2.0} 0 -${pi/2.0}"/>
     <parent link="${Camera01Name}_link"/>
     <child link="${Camera01Name}Right_link"/>
   </joint>
