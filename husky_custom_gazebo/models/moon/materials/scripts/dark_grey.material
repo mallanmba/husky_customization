@@ -5,7 +5,7 @@ material test/dark_grey_material
         pass
         {
             ambient 0.0 0.0 0.0
-            diffuse 0.5 0.5 0.5
+            diffuse 0.6 0.6 0.6
         }
     }
 }

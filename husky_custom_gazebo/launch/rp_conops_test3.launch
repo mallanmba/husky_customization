@@ -5,7 +5,7 @@
 
   <!-- override husky_gazebo husky_empty_world.launch variables -->
   <include file="$(find husky_custom_gazebo)/launch/rp_conops_empty_world.launch">
-    <arg name="world_name"     value="$(find husky_custom_gazebo)/worlds/rp_conops_test1.world"/>
+    <arg name="world_name"     value="$(find husky_custom_gazebo)/worlds/rp_conops_test2.world"/>
     <arg name="laser_enabled"  value="false"/>
     <arg name="ur5_enabled"    value="false"/>
     <arg name="kinect_enabled" value="false"/>
