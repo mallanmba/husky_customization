@@ -8,4 +8,6 @@ Templates for user customization of Husky description (URDF) and Gazebo configur
 
 For Husky instructions and tutorials, please see http://wiki.ros.org/Robots/Husky
 
+TESTING **TESTING** TESTING
+
 ![](http://i.imgur.com/C7k0jke.png)
